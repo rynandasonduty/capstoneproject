@@ -268,7 +268,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Facebook
                   </a>
@@ -276,7 +276,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Twitter
                   </a>
@@ -284,7 +284,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Instagram
                   </a>

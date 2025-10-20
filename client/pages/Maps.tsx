@@ -181,7 +181,7 @@ export default function Maps() {
             </div>
 
             {selectedLocation && (
-              <div className="rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+              <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
                 <h3 className="font-bold text-gray-900 mb-3">Detail Lokasi</h3>
                 {(() => {
                   const location = locations.find(

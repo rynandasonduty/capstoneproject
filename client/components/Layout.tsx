@@ -32,7 +32,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <header className="border-b border-[#E5E7EB] bg-white sticky top-0 z-40 shadow-sm">
+      <header className="border-b border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-900 sticky top-0 z-40 shadow-sm">
         <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-9 xl:px-[37px]">
           <div className="flex items-center justify-between h-16 md:h-20">
             <div

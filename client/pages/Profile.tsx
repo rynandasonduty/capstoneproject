@@ -64,7 +64,7 @@ export default function Profile() {
               </div>
             </div>
 
-            <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] mt-6">
+            <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] mt-6">
               <h3 className="font-semibold text-gray-900 mb-4">
                 Informasi Akun
               </h3>

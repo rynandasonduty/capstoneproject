@@ -148,7 +148,7 @@ export default function History() {
                       className="flex-1 md:flex-none px-3 py-2 rounded-md bg-[#0F172A] text-white hover:bg-[#0F172A]/90 transition-colors flex items-center justify-center gap-1 text-sm font-medium"
                       title="Export data"
                     >
-                      <FileDownload className="w-4 h-4" />
+                      <Download className="w-4 h-4" />
                       <span className="hidden md:inline">Ekspor</span>
                     </button>
                   </div>

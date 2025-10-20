@@ -3,6 +3,7 @@ import { useAuth } from "@/context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, LogOut, User, Home, Map, BarChart3, HelpCircle } from "lucide-react";
 import { useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface LayoutProps {
   children: React.ReactNode;

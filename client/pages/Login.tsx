@@ -121,14 +121,14 @@ export default function Login() {
               <label className="flex items-center gap-2 cursor-pointer">
                 <input
                   type="checkbox"
-                  className="w-4 h-4 rounded border-[#E5E7EB] text-[#0F172A] focus:ring-[#0F172A]"
+                  className="w-4 h-4 rounded border-[#E5E7EB] dark:border-slate-600 text-[#0F172A] dark:text-blue-500 focus:ring-[#0F172A] dark:focus:ring-blue-500"
                 />
-                <span className="text-gray-700">Ingat saya</span>
+                <span className="text-gray-700 dark:text-gray-300">Ingat saya</span>
               </label>
               <button
                 type="button"
                 onClick={() => navigate("/forgot-password")}
-                className="text-[#0F172A] hover:underline font-medium"
+                className="text-[#0F172A] dark:text-blue-400 hover:underline font-medium"
               >
                 Lupa password?
               </button>
@@ -137,7 +137,7 @@ export default function Login() {
             <Button
               type="submit"
               disabled={isLoading}
-              className="w-full h-12 rounded-md bg-[#0F172A] text-white font-medium hover:bg-[#0F172A]/90 disabled:opacity-50"
+              className="w-full h-12 rounded-md bg-[#0F172A] dark:bg-blue-600 text-white font-medium hover:bg-[#0F172A]/90 dark:hover:bg-blue-700 disabled:opacity-50"
             >
               {isLoading ? "Sedang masuk..." : "Masuk"}
             </Button>
@@ -145,25 +145,25 @@ export default function Login() {
 
           <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-[#E5E7EB]"></div>
+              <div className="w-full border-t border-[#E5E7EB] dark:border-slate-700"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Atau</span>
+              <span className="px-2 bg-white dark:bg-slate-900 text-gray-500 dark:text-gray-400">Atau</span>
             </div>
           </div>
 
-          <p className="text-center text-gray-600 text-sm">
+          <p className="text-center text-gray-600 dark:text-gray-400 text-sm">
             Belum memiliki akun?{" "}
             <button
               onClick={() => navigate("/register")}
-              className="text-[#0F172A] font-semibold hover:underline"
+              className="text-[#0F172A] dark:text-blue-400 font-semibold hover:underline"
             >
               Daftar di sini
             </button>
           </p>
         </div>
 
-        <p className="text-center text-sm text-gray-600 mt-4">
+        <p className="text-center text-sm text-gray-600 dark:text-gray-400 mt-4">
           Demo: Gunakan email apapun dengan password apapun
         </p>
       </div>

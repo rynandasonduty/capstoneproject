@@ -82,7 +82,7 @@ export default function Maps() {
           </div>
 
           <div className="lg:col-span-1 space-y-4">
-            <div className="rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+            <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
               <div className="relative mb-4">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                 <input
@@ -90,7 +90,7 @@ export default function Maps() {
                   placeholder="Cari lokasi..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 rounded-md border border-[#E5E7EB] bg-white text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-colors"
+                  className="w-full pl-10 pr-4 py-2 rounded-md border border-[#E5E7EB] bg-white dark:bg-white text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-colors"
                 />
               </div>
 

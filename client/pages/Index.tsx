@@ -153,7 +153,7 @@ export default function Index() {
         </div>
 
         <div className="rounded-md border border-[#E5E7EB] bg-white p-6 xl:p-[50px_87px_50px_73px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-          <h2 className="text-[32px] xl:text-[40px] font-bold mb-6 xl:mb-8">
+          <h2 className="text-[32px] xl:text-[40px] font-bold mb-6 xl:mb-8 text-gray-900 dark:text-white">
             Riwayat Optimasi
           </h2>
 

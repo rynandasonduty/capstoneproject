@@ -39,7 +39,7 @@ export default function Index() {
     setVehicleCount((prev) => Math.max(1, prev - 1));
 
   return (
-    <div className="min-h-screen bg-white p-4 md:p-6 lg:p-9 xl:p-[37px]">
+    <div className="min-h-screen bg-white dark:bg-slate-950 p-4 md:p-6 lg:p-9 xl:p-[37px]">
       <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-1 xl:grid-cols-[minmax(350px,399px)_1fr] gap-5 xl:gap-6 mb-5 xl:mb-6">
           <div className="space-y-5 xl:space-y-6">

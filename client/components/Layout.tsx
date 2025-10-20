@@ -239,7 +239,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <button
                     onClick={() => navigate("/help")}
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     FAQ
                   </button>
@@ -247,7 +247,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <button
                     onClick={() => navigate("/about")}
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Tentang Kami
                   </button>
@@ -255,7 +255,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <a
                     href="#"
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Hubungi Kami
                   </a>

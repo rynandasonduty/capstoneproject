@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useNotification } from "@/hooks/use-notification";
+import { forgotPasswordSchema } from "@/lib/validation";
 import { ArrowLeft, CheckCircle, Mail } from "lucide-react";
 
 export default function ForgotPassword() {

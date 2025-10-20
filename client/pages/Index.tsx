@@ -30,7 +30,7 @@ export default function Index() {
     setSelectedGardens((prev) =>
       prev.includes(gardenId)
         ? prev.filter((id) => id !== gardenId)
-        : [...prev, gardenId]
+        : [...prev, gardenId],
     );
   };
 

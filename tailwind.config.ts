@@ -14,8 +14,14 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Plus Jakarta Sans', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
-        inter: ['Inter', '-apple-system', 'Roboto', 'Helvetica', 'sans-serif'],
+        sans: [
+          "Plus Jakarta Sans",
+          "-apple-system",
+          "Roboto",
+          "Helvetica",
+          "sans-serif",
+        ],
+        inter: ["Inter", "-apple-system", "Roboto", "Helvetica", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

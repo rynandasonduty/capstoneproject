@@ -38,23 +38,23 @@ export default function ForgotPassword() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
         <div className="w-full max-w-md">
-          <div className="rounded-lg border border-[#E5E7EB] bg-white p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] text-center">
-            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 mx-auto mb-6">
-              <CheckCircle className="w-8 h-8 text-green-600" />
+          <div className="rounded-lg border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] text-center">
+            <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-950 mx-auto mb-6">
+              <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
             </div>
 
-            <h1 className="text-3xl font-bold mb-2 text-[#0F172A]">
+            <h1 className="text-3xl font-bold mb-2 text-[#0F172A] dark:text-white">
               Email Terkirim
             </h1>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
               Kami telah mengirimkan link untuk mereset password ke{" "}
               <strong>{email}</strong>
             </p>
 
-            <div className="bg-blue-50 border border-blue-200 rounded-md p-4 mb-6">
-              <p className="text-sm text-blue-800">
+            <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-md p-4 mb-6">
+              <p className="text-sm text-blue-800 dark:text-blue-200">
                 Periksa email Anda dan ikuti instruksi untuk mereset password.
                 Link berlaku selama 24 jam.
               </p>
@@ -62,7 +62,7 @@ export default function ForgotPassword() {
 
             <Button
               onClick={() => navigate("/login")}
-              className="w-full h-12 rounded-md bg-[#0F172A] text-white font-medium hover:bg-[#0F172A]/90"
+              className="w-full h-12 rounded-md bg-[#0F172A] dark:bg-blue-600 text-white font-medium hover:bg-[#0F172A]/90 dark:hover:bg-blue-700"
             >
               Kembali ke Login
             </Button>
@@ -72,7 +72,7 @@ export default function ForgotPassword() {
                 setSubmitted(false);
                 setEmail("");
               }}
-              className="mt-4 text-[#0F172A] font-medium hover:underline"
+              className="mt-4 text-[#0F172A] dark:text-blue-400 font-medium hover:underline"
             >
               Ubah email
             </button>

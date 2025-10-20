@@ -43,8 +43,8 @@ export default function Index() {
       <div className="mx-auto max-w-[1440px]">
         <div className="grid grid-cols-1 xl:grid-cols-[minmax(350px,399px)_1fr] gap-5 xl:gap-6 mb-5 xl:mb-6">
           <div className="space-y-5 xl:space-y-6">
-            <div className="rounded-md border border-[#E5E7EB] bg-white p-6 xl:p-[38px_37px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-              <h1 className="text-[32px] xl:text-[40px] font-bold leading-[1.25] mb-6 xl:mb-8 text-gray-900 dark:text-white">
+            <div className="rounded-md border border-[#E5E7EB] bg-white dark:bg-white p-6 xl:p-[38px_37px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+              <h1 className="text-[32px] xl:text-[40px] font-bold leading-[1.25] mb-6 xl:mb-8 text-gray-900">
                 Watering
                 <br />
                 Route Planner

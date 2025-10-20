@@ -201,7 +201,7 @@ export default function History() {
                           Lihat Detail Rute
                         </Button>
                         <Button className="flex-1 h-10 rounded-md bg-[#0F172A] text-white font-medium hover:bg-[#0F172A]/90 flex items-center justify-center gap-2">
-                          <FileDownload className="w-4 h-4" />
+                          <Download className="w-4 h-4" />
                           Ekspor PDF
                         </Button>
                       </div>

@@ -162,13 +162,13 @@ export default function Index() {
               <div key={index}>
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-4 xl:py-6">
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4 xl:gap-6 flex-1">
-                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[272px]">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[272px] text-gray-900">
                       {item.date}
                     </div>
-                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[82px]">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[82px] text-gray-900">
                       {item.points}
                     </div>
-                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[111px]">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[111px] text-gray-900">
                       {item.fleet}
                     </div>
                   </div>

@@ -141,7 +141,7 @@ export default function Index() {
             </div>
 
             <div className="rounded-md border border-[#E5E7EB] bg-white p-5 xl:p-[30px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-              <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4">
+              <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4 text-gray-900 dark:text-white">
                 Tinjau Pilihan
               </h2>
               <p className="text-lg xl:text-2xl font-bold">

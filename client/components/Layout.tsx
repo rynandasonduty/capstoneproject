@@ -60,8 +60,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     onClick={() => navigate(item.href)}
                     className={`flex items-center gap-1.5 px-3 lg:px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(item.href)
-                        ? "bg-[#0F172A] text-white"
-                        : "text-gray-700 hover:bg-gray-100"
+                        ? "bg-[#0F172A] dark:bg-slate-700 text-white"
+                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-800"
                     }`}
                   >
                     <item.icon className="w-4 h-4" />

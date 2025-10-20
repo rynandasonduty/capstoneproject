@@ -39,14 +39,14 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               className="flex items-center gap-2 md:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
               onClick={() => navigate("/")}
             >
-              <div className="flex items-center justify-center w-10 h-10 rounded-md bg-[#0F172A]">
+              <div className="flex items-center justify-center w-10 h-10 rounded-md bg-[#0F172A] dark:bg-slate-700">
                 <span className="text-white font-bold text-lg">WRP</span>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg md:text-xl font-bold text-[#0F172A]">
+                <h1 className="text-lg md:text-xl font-bold text-[#0F172A] dark:text-white">
                   Watering Route Planner
                 </h1>
-                <p className="text-xs md:text-sm text-gray-600">
+                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                   Surabaya City
                 </p>
               </div>

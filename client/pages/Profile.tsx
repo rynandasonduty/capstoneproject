@@ -42,7 +42,7 @@ export default function Profile() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-1">
-            <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+            <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
               <div className="flex flex-col items-center text-center">
                 <div className="flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 mb-4">
                   <User className="w-12 h-12 text-white" />

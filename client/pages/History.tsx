@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Calendar, FileDownload, Eye } from "lucide-react";
+import { Calendar, Download, Eye } from "lucide-react";
 
 interface HistoryRecord {
   id: string;

@@ -139,7 +139,7 @@ export default function History() {
                           expandedId === record.id ? null : record.id,
                         )
                       }
-                      className="flex-1 md:flex-none px-3 py-2 rounded-md border border-[#E5E7EB] bg-white text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center gap-1 text-sm font-medium"
+                      className="flex-1 md:flex-none px-3 py-2 rounded-md border border-[#E5E7EB] bg-white dark:bg-white text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center gap-1 text-sm font-medium"
                       title="View details"
                     >
                       <Eye className="w-4 h-4" />

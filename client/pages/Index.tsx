@@ -101,7 +101,9 @@ export default function Index() {
                     >
                       +
                     </button>
-                    <span className="text-base font-bold ml-2 text-gray-900">Kendaraan</span>
+                    <span className="text-base font-bold ml-2 text-gray-900">
+                      Kendaraan
+                    </span>
                   </div>
                 </div>
 

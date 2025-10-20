@@ -111,7 +111,7 @@ export default function Index() {
                       setSelectedGardens([]);
                       setVehicleCount(2);
                     }}
-                    className="w-full text-center text-[15px] font-bold hover:opacity-70 transition-opacity"
+                    className="w-full text-center text-[15px] font-bold hover:opacity-70 transition-opacity text-gray-900"
                   >
                     Reset
                   </button>

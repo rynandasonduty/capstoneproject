@@ -71,13 +71,14 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </nav>
 
             <div className="flex items-center gap-2 md:gap-4">
+              <ThemeToggle />
               {isAuthenticated ? (
                 <div className="hidden md:flex items-center gap-3">
                   <div className="text-right">
-                    <p className="text-sm font-semibold text-gray-900">
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {user?.name}
                     </p>
-                    <p className="text-xs text-gray-600">{user?.email}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">{user?.email}</p>
                   </div>
                   <button
                     onClick={() => navigate("/profile")}

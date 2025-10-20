@@ -193,7 +193,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       <main className="flex-1">{children}</main>
 
-      <footer className="border-t border-[#E5E7EB] bg-gray-50 mt-12 md:mt-16">
+      <footer className="border-t border-[#E5E7EB] dark:border-slate-700 bg-gray-50 dark:bg-slate-900 mt-12 md:mt-16">
         <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-9 xl:px-[37px] py-8 md:py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>

@@ -77,11 +77,11 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="rounded-md border border-[#E5E7EB] bg-white p-4 xl:p-5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-                  <h2 className="text-xl xl:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                <div className="rounded-md border border-[#E5E7EB] bg-white dark:bg-white p-4 xl:p-5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+                  <h2 className="text-xl xl:text-2xl font-bold mb-4 text-gray-900">
                     Jumlah Armada
                   </h2>
-                  <div className="flex items-center gap-3 xl:gap-4 rounded-md border border-[#E5E7EB] bg-white px-3 xl:px-4 py-2 xl:py-2.5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] w-fit">
+                  <div className="flex items-center gap-3 xl:gap-4 rounded-md border border-[#E5E7EB] bg-white dark:bg-white px-3 xl:px-4 py-2 xl:py-2.5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] w-fit">
                     <button
                       onClick={decrementVehicles}
                       className="text-base font-bold hover:opacity-70 transition-opacity"

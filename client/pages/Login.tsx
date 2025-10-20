@@ -45,31 +45,25 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="rounded-lg border border-[#E5E7EB] bg-white p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-          <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#0F172A] mx-auto mb-6">
+        <div className="rounded-lg border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+          <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#0F172A] dark:bg-slate-700 mx-auto mb-6">
             <span className="text-white font-bold text-2xl">WRP</span>
           </div>
 
-          <h1 className="text-3xl font-bold text-center mb-2 text-[#0F172A]">
+          <h1 className="text-3xl font-bold text-center mb-2 text-[#0F172A] dark:text-white">
             Masuk
           </h1>
-          <p className="text-center text-gray-600 mb-8">
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
             Selamat datang di Watering Route Planner
           </p>
-
-          {error && (
-            <div className="mb-6 p-4 rounded-md bg-red-50 border border-red-200">
-              <p className="text-sm font-medium text-red-800">{error}</p>
-            </div>
-          )}
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Email
               </label>
@@ -79,15 +73,19 @@ export default function Login() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="nama@email.com"
-                className="w-full px-4 py-3 rounded-md border border-[#E5E7EB] bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-colors"
-                required
+                className="w-full px-4 py-3 rounded-md border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-blue-500 focus:border-transparent transition-colors"
               />
+              {errors.email && (
+                <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                  {errors.email}
+                </p>
+              )}
             </div>
 
             <div>
               <label
                 htmlFor="password"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Password
               </label>
@@ -98,13 +96,12 @@ export default function Login() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
-                  className="w-full px-4 py-3 rounded-md border border-[#E5E7EB] bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#0F172A] focus:border-transparent transition-colors"
-                  required
+                  className="w-full px-4 py-3 rounded-md border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0F172A] dark:focus:ring-blue-500 focus:border-transparent transition-colors"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
                 >
                   {showPassword ? (
                     <EyeOff className="w-5 h-5" />
@@ -113,6 +110,11 @@ export default function Login() {
                   )}
                 </button>
               </div>
+              {errors.password && (
+                <p className="mt-1 text-sm text-red-600 dark:text-red-400">
+                  {errors.password}
+                </p>
+              )}
             </div>
 
             <div className="flex items-center justify-between text-sm">

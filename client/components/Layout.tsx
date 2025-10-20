@@ -205,8 +205,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900">Produk</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Produk</h4>
+              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li>
                   <button
                     onClick={() => navigate("/")}

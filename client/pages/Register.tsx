@@ -64,25 +64,19 @@ export default function Register() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="rounded-lg border border-[#E5E7EB] bg-white p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-          <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#0F172A] mx-auto mb-6">
+        <div className="rounded-lg border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+          <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#0F172A] dark:bg-slate-700 mx-auto mb-6">
             <span className="text-white font-bold text-2xl">WRP</span>
           </div>
 
-          <h1 className="text-3xl font-bold text-center mb-2 text-[#0F172A]">
+          <h1 className="text-3xl font-bold text-center mb-2 text-[#0F172A] dark:text-white">
             Daftar
           </h1>
-          <p className="text-center text-gray-600 mb-8">
+          <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
             Buat akun baru untuk memulai
           </p>
-
-          {error && (
-            <div className="mb-6 p-4 rounded-md bg-red-50 border border-red-200">
-              <p className="text-sm font-medium text-red-800">{error}</p>
-            </div>
-          )}
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>

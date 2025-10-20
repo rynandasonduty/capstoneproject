@@ -13,10 +13,11 @@ export default function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { register } = useAuth();
+  const { success, error: notifyError } = useNotification();
 
   const passwordStrength = {
     hasMinLength: password.length >= 6,
@@ -31,26 +32,32 @@ export default function Register() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setErrors({});
 
-    if (password !== confirmPassword) {
-      setError("Password tidak cocok");
-      return;
-    }
-
-    if (!isPasswordValid) {
-      setError(
-        "Password harus memiliki minimal 6 karakter, 1 huruf besar, dan 1 angka"
-      );
-      return;
-    }
-
-    setIsLoading(true);
     try {
-      await register(name, email, password);
+      const validated = registerSchema.parse({
+        name,
+        email,
+        password,
+        confirmPassword,
+      });
+
+      setIsLoading(true);
+      await register(validated.name, validated.email, validated.password);
+      success("Registrasi berhasil!");
       navigate("/");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Registrasi gagal");
+    } catch (err: any) {
+      if (err.errors) {
+        const fieldErrors: Record<string, string> = {};
+        err.errors.forEach((error: any) => {
+          fieldErrors[error.path[0]] = error.message;
+        });
+        setErrors(fieldErrors);
+        notifyError("Mohon periksa kembali form Anda");
+      } else {
+        const message = err instanceof Error ? err.message : "Registrasi gagal";
+        notifyError(message);
+      }
     } finally {
       setIsLoading(false);
     }

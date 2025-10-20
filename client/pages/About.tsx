@@ -29,7 +29,7 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-slate-950">
       <div className="bg-gradient-to-br from-slate-50 to-slate-100 py-12 md:py-16 lg:py-20">
         <div className="max-w-[1440px] mx-auto px-4 md:px-6 lg:px-9 xl:px-[37px]">
           <h1 className="text-[32px] xl:text-[40px] font-bold text-[#0F172A] mb-4">

@@ -218,7 +218,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <button
                     onClick={() => navigate("/maps")}
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     Maps
                   </button>
@@ -226,7 +226,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <li>
                   <button
                     onClick={() => navigate("/history")}
-                    className="hover:text-[#0F172A] transition-colors"
+                    className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
                   >
                     History
                   </button>

@@ -10,21 +10,35 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const { login } = useAuth();
+  const { success, error: notifyError } = useNotification();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
-    setIsLoading(true);
+    setErrors({});
 
     try {
-      await login(email, password);
+      const validated = loginSchema.parse({ email, password });
+      setIsLoading(true);
+
+      await login(validated.email, validated.password);
+      success("Login berhasil!");
       navigate("/");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Login gagal");
+    } catch (err: any) {
+      if (err.errors) {
+        const fieldErrors: Record<string, string> = {};
+        err.errors.forEach((error: any) => {
+          fieldErrors[error.path[0]] = error.message;
+        });
+        setErrors(fieldErrors);
+        notifyError("Mohon periksa kembali form Anda");
+      } else {
+        const message = err instanceof Error ? err.message : "Login gagal";
+        notifyError(message);
+      }
     } finally {
       setIsLoading(false);
     }

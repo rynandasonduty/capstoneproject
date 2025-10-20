@@ -52,7 +52,7 @@ export default function Index() {
 
               <div className="space-y-5 xl:space-y-6">
                 <div>
-                  <h2 className="text-xl xl:text-2xl font-bold mb-4">
+                  <h2 className="text-xl xl:text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                     Checklist Taman
                   </h2>
                   <div className="space-y-[17px] pr-4 max-h-[114px] overflow-y-auto relative">

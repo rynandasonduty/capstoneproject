@@ -293,15 +293,15 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
           </div>
 
-          <div className="border-t border-[#E5E7EB] pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-gray-600">
+          <div className="border-t border-[#E5E7EB] dark:border-slate-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               &copy; 2024 Watering Route Planner. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-gray-600">
-              <a href="#" className="hover:text-[#0F172A] transition-colors">
+            <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
+              <a href="#" className="hover:text-[#0F172A] dark:hover:text-white transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-[#0F172A] transition-colors">
+              <a href="#" className="hover:text-[#0F172A] dark:hover:text-white transition-colors">
                 Terms of Service
               </a>
             </div>

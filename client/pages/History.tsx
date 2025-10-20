@@ -69,7 +69,7 @@ export default function History() {
           </p>
         </div>
 
-        <div className="rounded-lg border border-[#E5E7EB] bg-white shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] overflow-hidden">
+        <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] overflow-hidden">
           <div className="hidden md:grid grid-cols-12 gap-4 p-6 bg-gray-50 border-b border-[#E5E7EB] font-semibold text-gray-900 text-sm">
             <div className="col-span-4">Tanggal</div>
             <div className="col-span-2">Titik</div>

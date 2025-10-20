@@ -84,24 +84,24 @@ export default function Index() {
                   <div className="flex items-center gap-3 xl:gap-4 rounded-md border border-[#E5E7EB] bg-white dark:bg-white px-3 xl:px-4 py-2 xl:py-2.5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] w-fit">
                     <button
                       onClick={decrementVehicles}
-                      className="text-base font-bold hover:opacity-70 transition-opacity"
+                      className="text-base font-bold hover:opacity-70 transition-opacity text-gray-900"
                       aria-label="Decrease vehicle count"
                     >
                       -
                     </button>
                     <div className="w-px h-5 bg-[#E2E8F0]"></div>
-                    <span className="text-xl font-bold min-w-[12px] text-center">
+                    <span className="text-xl font-bold min-w-[12px] text-center text-gray-900">
                       {vehicleCount}
                     </span>
                     <div className="w-px h-5 bg-[#E2E8F0]"></div>
                     <button
                       onClick={incrementVehicles}
-                      className="text-base font-bold hover:opacity-70 transition-opacity"
+                      className="text-base font-bold hover:opacity-70 transition-opacity text-gray-900"
                       aria-label="Increase vehicle count"
                     >
                       +
                     </button>
-                    <span className="text-base font-bold ml-2">Kendaraan</span>
+                    <span className="text-base font-bold ml-2 text-gray-900">Kendaraan</span>
                   </div>
                 </div>
 

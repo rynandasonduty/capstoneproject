@@ -66,7 +66,7 @@ export default function Index() {
                         />
                         <label
                           htmlFor={garden.id}
-                          className="text-sm font-medium font-inter leading-[14px] cursor-pointer select-none"
+                          className="text-sm font-medium font-inter leading-[14px] cursor-pointer select-none text-gray-900"
                         >
                           {garden.name}
                         </label>

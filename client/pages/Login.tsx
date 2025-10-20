@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui/button";
+import { useNotification } from "@/hooks/use-notification";
+import { loginSchema } from "@/lib/validation";
 import { Eye, EyeOff } from "lucide-react";
 
 export default function Login() {

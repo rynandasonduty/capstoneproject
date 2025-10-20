@@ -8,17 +8,32 @@ import { ArrowLeft, CheckCircle, Mail } from "lucide-react";
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { success } = useNotification();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsLoading(true);
+    setError("");
 
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      forgotPasswordSchema.parse({ email });
+      setIsLoading(true);
 
-    setSubmitted(true);
-    setIsLoading(false);
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
+      success("Email reset berhasil dikirim!");
+      setSubmitted(true);
+    } catch (err: any) {
+      if (err.errors) {
+        setError(err.errors[0].message);
+      } else {
+        setError(err instanceof Error ? err.message : "Gagal mengirim email");
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (submitted) {

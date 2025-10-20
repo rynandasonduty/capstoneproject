@@ -144,7 +144,7 @@ export default function Index() {
               <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4 text-gray-900 dark:text-white">
                 Tinjau Pilihan
               </h2>
-              <p className="text-lg xl:text-2xl font-bold">
+              <p className="text-lg xl:text-2xl font-bold text-gray-900 dark:text-white">
                 → {selectedGardens.length} titik dipilih • {vehicleCount}{" "}
                 kendaraan
               </p>

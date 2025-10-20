@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Button } from "@/components/ui/button";
-import { Minus, Plus } from "lucide-react";
 
 export default function Index() {
   const [selectedGardens, setSelectedGardens] = useState<string[]>([]);
@@ -40,21 +39,23 @@ export default function Index() {
     setVehicleCount((prev) => Math.max(1, prev - 1));
 
   return (
-    <div className="min-h-screen bg-white p-4 md:p-6 lg:p-9">
-      <div className="mx-auto max-w-[1366px]">
-        <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-6 mb-6">
-          <div className="space-y-6">
-            <div className="rounded-md border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-              <h1 className="text-[40px] font-bold leading-tight mb-8">
+    <div className="min-h-screen bg-white p-4 md:p-6 lg:p-9 xl:p-[37px]">
+      <div className="mx-auto max-w-[1440px]">
+        <div className="grid grid-cols-1 xl:grid-cols-[minmax(350px,399px)_1fr] gap-5 xl:gap-6 mb-5 xl:mb-6">
+          <div className="space-y-5 xl:space-y-6">
+            <div className="rounded-md border border-[#E5E7EB] bg-white p-6 xl:p-[38px_37px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+              <h1 className="text-[32px] xl:text-[40px] font-bold leading-[1.25] mb-6 xl:mb-8">
                 Watering
                 <br />
                 Route Planner
               </h1>
 
-              <div className="space-y-6">
+              <div className="space-y-5 xl:space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-4">Checklist Taman</h2>
-                  <div className="space-y-3 pr-4 max-h-[114px] overflow-y-auto relative">
+                  <h2 className="text-xl xl:text-2xl font-bold mb-4">
+                    Checklist Taman
+                  </h2>
+                  <div className="space-y-[17px] pr-4 max-h-[114px] overflow-y-auto relative">
                     {gardens.map((garden) => (
                       <div key={garden.id} className="flex items-center gap-2">
                         <Checkbox
@@ -65,7 +66,7 @@ export default function Index() {
                         />
                         <label
                           htmlFor={garden.id}
-                          className="text-sm font-medium font-inter leading-[14px] cursor-pointer"
+                          className="text-sm font-medium font-inter leading-[14px] cursor-pointer select-none"
                         >
                           {garden.name}
                         </label>
@@ -76,9 +77,11 @@ export default function Index() {
                   </div>
                 </div>
 
-                <div className="rounded-md border border-[#E5E7EB] bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-                  <h2 className="text-2xl font-bold mb-4">Jumlah Armada</h2>
-                  <div className="flex items-center gap-4 rounded-md border border-[#E5E7EB] bg-white px-4 py-2.5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] w-fit">
+                <div className="rounded-md border border-[#E5E7EB] bg-white p-4 xl:p-5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+                  <h2 className="text-xl xl:text-2xl font-bold mb-4">
+                    Jumlah Armada
+                  </h2>
+                  <div className="flex items-center gap-3 xl:gap-4 rounded-md border border-[#E5E7EB] bg-white px-3 xl:px-4 py-2 xl:py-2.5 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] w-fit">
                     <button
                       onClick={decrementVehicles}
                       className="text-base font-bold hover:opacity-70 transition-opacity"
@@ -103,11 +106,17 @@ export default function Index() {
                 </div>
 
                 <div className="space-y-3">
-                  <button className="w-full text-center text-[15px] font-bold hover:opacity-70 transition-opacity">
+                  <button
+                    onClick={() => {
+                      setSelectedGardens([]);
+                      setVehicleCount(2);
+                    }}
+                    className="w-full text-center text-[15px] font-bold hover:opacity-70 transition-opacity"
+                  >
                     Reset
                   </button>
                   <Button
-                    className="w-full h-12 rounded-md bg-[#0F172A] text-white font-inter text-sm hover:bg-[#0F172A]/90"
+                    className="w-full h-12 rounded-md bg-[#0F172A] text-white font-inter text-sm font-medium hover:bg-[#0F172A]/90"
                     onClick={() => console.log("Start optimization")}
                   >
                     Mulai Optimasi
@@ -117,9 +126,9 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-5 xl:space-y-6">
             <div className="rounded-md border border-[#E5E7EB] bg-white shadow-[0_4px_4px_0_rgba(174,174,174,0.25)] overflow-hidden">
-              <div className="relative w-full h-[475px] bg-gray-100">
+              <div className="relative w-full h-[300px] md:h-[400px] xl:h-[475px] bg-gray-100">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/714cb23c6319470d5f129aaac54a4c3d31b6b2e2?width=1900"
                   alt="Map showing Surabaya garden locations"
@@ -131,9 +140,11 @@ export default function Index() {
               </div>
             </div>
 
-            <div className="rounded-md border border-[#E5E7EB] bg-white p-6 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-              <h2 className="text-2xl font-bold mb-4">Tinjau Pilihan</h2>
-              <p className="text-2xl font-bold">
+            <div className="rounded-md border border-[#E5E7EB] bg-white p-5 xl:p-[30px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+              <h2 className="text-xl xl:text-2xl font-bold mb-3 xl:mb-4">
+                Tinjau Pilihan
+              </h2>
+              <p className="text-lg xl:text-2xl font-bold">
                 → {selectedGardens.length} titik dipilih • {vehicleCount}{" "}
                 kendaraan
               </p>
@@ -141,26 +152,28 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="rounded-md border border-[#E5E7EB] bg-white p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-          <h2 className="text-[40px] font-bold mb-8">Riwayat Optimasi</h2>
+        <div className="rounded-md border border-[#E5E7EB] bg-white p-6 xl:p-[50px_87px_50px_73px] shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+          <h2 className="text-[32px] xl:text-[40px] font-bold mb-6 xl:mb-8">
+            Riwayat Optimasi
+          </h2>
 
           <div className="space-y-0">
             {historyData.map((item, index) => (
               <div key={index}>
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-6">
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-6 flex-1">
-                    <div className="text-2xl font-bold sm:min-w-[272px]">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-4 xl:py-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 xl:gap-6 flex-1">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[272px]">
                       {item.date}
                     </div>
-                    <div className="text-2xl font-bold sm:min-w-[82px]">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[82px]">
                       {item.points}
                     </div>
-                    <div className="text-2xl font-bold sm:min-w-[111px]">
+                    <div className="text-lg xl:text-2xl font-bold xl:min-w-[111px]">
                       {item.fleet}
                     </div>
                   </div>
                   <Button
-                    className="h-10 px-4 rounded-md bg-[#0F172A] text-white font-inter text-sm hover:bg-[#0F172A]/90 w-fit"
+                    className="h-10 px-4 rounded-md bg-[#0F172A] text-white font-inter text-sm font-medium hover:bg-[#0F172A]/90 w-fit"
                     onClick={() => console.log("Export", item.date)}
                   >
                     Ekspor

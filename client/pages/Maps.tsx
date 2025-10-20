@@ -56,7 +56,7 @@ export default function Maps() {
   );
 
   return (
-    <div className="min-h-screen bg-white p-4 md:p-6 lg:p-9 xl:p-[37px]">
+    <div className="min-h-screen bg-white dark:bg-slate-950 p-4 md:p-6 lg:p-9 xl:p-[37px]">
       <div className="mx-auto max-w-[1440px]">
         <div className="mb-8">
           <h1 className="text-[32px] xl:text-[40px] font-bold text-[#0F172A]">

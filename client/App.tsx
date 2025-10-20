@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { AuthProvider } from "@/context/AuthContext";
 import { Layout } from "@/components/Layout";
@@ -24,6 +24,18 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const AuthLayout = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+
+const ProtectedLayout = ({ children }: { children: React.ReactNode }) => (
+  <Layout>
+    <ProtectedRoute>{children}</ProtectedRoute>
+  </Layout>
+);
+
+const PublicLayout = ({ children }: { children: React.ReactNode }) => (
+  <Layout>{children}</Layout>
+);
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -37,37 +49,61 @@ const App = () => (
             <Route path="/forgot-password" element={<ForgotPassword />} />
 
             <Route
+              path="/"
               element={
-                <ProtectedRoute>
-                  <Layout>
-                    <Routes>
-                      <Route path="/" element={<Index />} />
-                      <Route path="/maps" element={<Maps />} />
-                      <Route path="/history" element={<History />} />
-                      <Route path="/profile" element={<Profile />} />
-                    </Routes>
-                  </Layout>
-                </ProtectedRoute>
+                <ProtectedLayout>
+                  <Index />
+                </ProtectedLayout>
+              }
+            />
+            <Route
+              path="/maps"
+              element={
+                <ProtectedLayout>
+                  <Maps />
+                </ProtectedLayout>
+              }
+            />
+            <Route
+              path="/history"
+              element={
+                <ProtectedLayout>
+                  <History />
+                </ProtectedLayout>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedLayout>
+                  <Profile />
+                </ProtectedLayout>
               }
             />
 
             <Route
+              path="/about"
               element={
-                <Layout>
-                  <Routes>
-                    <Route path="/about" element={<About />} />
-                    <Route path="/help" element={<Help />} />
-                  </Routes>
-                </Layout>
+                <PublicLayout>
+                  <About />
+                </PublicLayout>
+              }
+            />
+            <Route
+              path="/help"
+              element={
+                <PublicLayout>
+                  <Help />
+                </PublicLayout>
               }
             />
 
             <Route
               path="*"
               element={
-                <Layout>
+                <PublicLayout>
                   <NotFound />
-                </Layout>
+                </PublicLayout>
               }
             />
           </Routes>

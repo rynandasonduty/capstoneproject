@@ -4,18 +4,15 @@ import { ChevronDown, Search, Mail, Phone } from "lucide-react";
 const faqs = [
   {
     question: "Bagaimana cara memulai optimasi rute?",
-    answer:
-      "Masuk ke dashboard, pilih taman yang perlu disiram, tentukan jumlah armada, lalu klik 'Mulai Optimasi'. Sistem akan menghitung rute optimal untuk Anda.",
+    answer: "nasi goreng enak",
   },
   {
     question: "Berapa biaya untuk menggunakan sistem ini?",
-    answer:
-      "Watering Route Planner tersedia secara gratis untuk semua pengguna terdaftar di Kota Surabaya. Tidak ada biaya tambahan untuk optimasi rute.",
+    answer: "info mi ayam enak di surabaya?",
   },
   {
     question: "Bagaimana cara mengekspor hasil optimasi?",
-    answer:
-      "Setelah optimasi selesai, Anda dapat melihat riwayat optimasi dan mengklik tombol 'Ekspor' untuk mengunduh laporan dalam format PDF.",
+    answer: "sek belum tau",
   },
   {
     question: "Apa itu Riwayat Optimasi?",
@@ -29,8 +26,7 @@ const faqs = [
   },
   {
     question: "Bagaimana cara menghubungi tim dukungan?",
-    answer:
-      "Anda dapat menghubungi tim dukungan melalui email support@wateringplanner.id atau telepon +62 31 xxxx xxxx. Kami siap membantu dari Senin-Jumat jam 09:00-17:00.",
+    answer: "hubungi damkar",
   },
 ];
 
@@ -129,7 +125,7 @@ export default function Help() {
                     <h3 className="font-semibold text-gray-900">Email</h3>
                   </div>
                   <p className="text-sm text-gray-600 ml-13">
-                    support@wateringplanner.id
+                    capstone@tugas.com
                   </p>
                   <button className="text-sm text-[#0F172A] font-medium hover:underline mt-2">
                     Kirim Email

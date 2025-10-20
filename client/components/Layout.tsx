@@ -49,11 +49,11 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               onClick={() => navigate("/")}
             >
               <div className="flex items-center justify-center w-10 h-10 rounded-md bg-[#0F172A] dark:bg-slate-700">
-                <span className="text-white font-bold text-lg">WRP</span>
+                <span className="text-white font-bold text-lg">OK</span>
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg md:text-xl font-bold text-[#0F172A] dark:text-white">
-                  Watering Route Planner
+                  Sek, Namanya Nanti Dulu
                 </h1>
                 <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">
                   Surabaya City
@@ -209,7 +209,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-bold text-lg mb-4 text-[#0F172A] dark:text-white">
-                Watering Route Planner
+                Sek, Namanya Nanti Dulu
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 Sistem optimasi rute penyiraman taman kota Surabaya yang
@@ -313,7 +313,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
           <div className="border-t border-[#E5E7EB] dark:border-slate-700 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              &copy; 2024 Watering Route Planner. All rights reserved.
+              &copy; 2025 Tugas Capstone Anjay. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
               <a

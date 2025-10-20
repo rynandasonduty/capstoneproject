@@ -49,14 +49,14 @@ export default function Login() {
       <div className="w-full max-w-md">
         <div className="rounded-lg border border-[#E5E7EB] dark:border-slate-700 bg-white dark:bg-slate-900 p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
           <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-[#0F172A] dark:bg-slate-700 mx-auto mb-6">
-            <span className="text-white font-bold text-2xl">WRP</span>
+            <span className="text-white font-bold text-2xl">OK</span>
           </div>
 
           <h1 className="text-3xl font-bold text-center mb-2 text-[#0F172A] dark:text-white">
             Masuk
           </h1>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-            Selamat datang di Watering Route Planner
+            Selamat datang di Web Optimasi Penyiraman
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">

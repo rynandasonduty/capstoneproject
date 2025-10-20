@@ -7,7 +7,14 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   return (
-    <NextThemesProvider attribute="class" defaultTheme="light" enableSystem>
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem
+      storageKey="wrp-theme"
+      enableColorScheme={false}
+      forcedTheme={undefined}
+    >
       {children}
     </NextThemesProvider>
   );

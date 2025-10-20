@@ -64,12 +64,16 @@ export default function About() {
             </p>
           </div>
           <div className="rounded-lg border border-[#E5E7EB] bg-gradient-to-br from-blue-50 to-indigo-50 p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-            <h3 className="text-xl font-bold text-[#0F172A] mb-6">Inovasi Kami</h3>
+            <h3 className="text-xl font-bold text-[#0F172A] mb-6">
+              Inovasi Kami
+            </h3>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <span className="text-xl font-bold text-blue-600 mt-1">✓</span>
                 <div>
-                  <p className="font-semibold text-gray-900">Aplikasi Web Modern</p>
+                  <p className="font-semibold text-gray-900">
+                    Aplikasi Web Modern
+                  </p>
                   <p className="text-sm text-gray-600">
                     Interface yang user-friendly dan responsif
                   </p>
@@ -150,9 +154,9 @@ export default function About() {
             <div>
               <h3 className="text-lg font-bold text-[#0F172A] mb-2">Misi</h3>
               <p className="text-gray-700">
-                Meningkatkan efisiensi operasional, mengurangi biaya operasional,
-                dan berkontribusi pada pengelolaan taman kota yang lebih baik di
-                Surabaya.
+                Meningkatkan efisiensi operasional, mengurangi biaya
+                operasional, dan berkontribusi pada pengelolaan taman kota yang
+                lebih baik di Surabaya.
               </p>
             </div>
           </div>

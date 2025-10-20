@@ -20,7 +20,8 @@ export default function Error500() {
             Server Error
           </p>
           <p className="text-gray-600 dark:text-gray-400 mb-8">
-            Maaf, terjadi kesalahan di server kami. Tim kami sudah diberitahu dan akan segera memperbaikinya.
+            Maaf, terjadi kesalahan di server kami. Tim kami sudah diberitahu
+            dan akan segera memperbaikinya.
           </p>
 
           <div className="space-y-3">

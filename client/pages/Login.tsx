@@ -123,7 +123,9 @@ export default function Login() {
                   type="checkbox"
                   className="w-4 h-4 rounded border-[#E5E7EB] dark:border-slate-600 text-[#0F172A] dark:text-blue-500 focus:ring-[#0F172A] dark:focus:ring-blue-500"
                 />
-                <span className="text-gray-700 dark:text-gray-300">Ingat saya</span>
+                <span className="text-gray-700 dark:text-gray-300">
+                  Ingat saya
+                </span>
               </label>
               <button
                 type="button"
@@ -148,7 +150,9 @@ export default function Login() {
               <div className="w-full border-t border-[#E5E7EB] dark:border-slate-700"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white dark:bg-slate-900 text-gray-500 dark:text-gray-400">Atau</span>
+              <span className="px-2 bg-white dark:bg-slate-900 text-gray-500 dark:text-gray-400">
+                Atau
+              </span>
             </div>
           </div>
 

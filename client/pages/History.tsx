@@ -135,7 +135,9 @@ export default function History() {
                   <div className="md:col-span-2 flex items-center gap-2">
                     <button
                       onClick={() =>
-                        setExpandedId(expandedId === record.id ? null : record.id)
+                        setExpandedId(
+                          expandedId === record.id ? null : record.id,
+                        )
                       }
                       className="flex-1 md:flex-none px-3 py-2 rounded-md border border-[#E5E7EB] bg-white text-gray-700 hover:bg-gray-50 transition-colors flex items-center justify-center gap-1 text-sm font-medium"
                       title="View details"
@@ -216,10 +218,10 @@ export default function History() {
         <div className="mt-8 rounded-lg border border-[#E5E7EB] bg-blue-50 p-6">
           <h3 className="font-semibold text-gray-900 mb-2">💡 Tips</h3>
           <p className="text-sm text-gray-700">
-            Klik tombol "Lihat" untuk melihat detail lengkap dari setiap optimasi,
-            termasuk rute spesifik untuk setiap armada. Gunakan tombol "Ekspor"
-            untuk mengunduh laporan dalam format PDF untuk referensi dan
-            dokumentasi.
+            Klik tombol "Lihat" untuk melihat detail lengkap dari setiap
+            optimasi, termasuk rute spesifik untuk setiap armada. Gunakan tombol
+            "Ekspor" untuk mengunduh laporan dalam format PDF untuk referensi
+            dan dokumentasi.
           </p>
         </div>
       </div>

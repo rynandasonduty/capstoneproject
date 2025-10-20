@@ -13,7 +13,8 @@ export default function Maintenance() {
             Sedang Dalam Perbaikan
           </h1>
           <p className="text-gray-600 dark:text-gray-400 mb-6">
-            Kami sedang melakukan pemeliharaan untuk meningkatkan layanan kami. Silakan kembali lagi dalam beberapa saat.
+            Kami sedang melakukan pemeliharaan untuk meningkatkan layanan kami.
+            Silakan kembali lagi dalam beberapa saat.
           </p>
 
           <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-md p-4">

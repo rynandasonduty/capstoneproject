@@ -140,8 +140,8 @@ export default function Profile() {
 
                 <div className="rounded-md border border-yellow-200 bg-yellow-50 p-4">
                   <p className="text-sm text-yellow-800">
-                    <strong>Catatan:</strong> Untuk mengubah email, silakan hubungi
-                    dukungan pelanggan kami.
+                    <strong>Catatan:</strong> Untuk mengubah email, silakan
+                    hubungi dukungan pelanggan kami.
                   </p>
                 </div>
 
@@ -163,9 +163,7 @@ export default function Profile() {
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 border border-[#E5E7EB] rounded-md">
                   <div>
-                    <p className="font-medium text-gray-900">
-                      Ubah Password
-                    </p>
+                    <p className="font-medium text-gray-900">Ubah Password</p>
                     <p className="text-sm text-gray-600">
                       Perbarui password akun Anda secara berkala
                     </p>

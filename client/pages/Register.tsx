@@ -230,11 +230,17 @@ export default function Register() {
               />
               <span className="text-sm text-gray-700">
                 Saya setuju dengan{" "}
-                <a href="#" className="text-[#0F172A] hover:underline font-medium">
+                <a
+                  href="#"
+                  className="text-[#0F172A] hover:underline font-medium"
+                >
                   Syarat dan Ketentuan
                 </a>{" "}
                 dan{" "}
-                <a href="#" className="text-[#0F172A] hover:underline font-medium">
+                <a
+                  href="#"
+                  className="text-[#0F172A] hover:underline font-medium"
+                >
                   Kebijakan Privasi
                 </a>
               </span>

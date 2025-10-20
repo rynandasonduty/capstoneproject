@@ -1,7 +1,16 @@
 import React from "react";
 import { useAuth } from "@/context/AuthContext";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Menu, X, LogOut, User, Home, Map, BarChart3, HelpCircle } from "lucide-react";
+import {
+  Menu,
+  X,
+  LogOut,
+  User,
+  Home,
+  Map,
+  BarChart3,
+  HelpCircle,
+} from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -78,7 +87,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <p className="text-sm font-semibold text-gray-900 dark:text-white">
                       {user?.name}
                     </p>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">{user?.email}</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                      {user?.email}
+                    </p>
                   </div>
                   <button
                     onClick={() => navigate("/profile")}
@@ -201,11 +212,14 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 Watering Route Planner
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Sistem optimasi rute penyiraman taman kota Surabaya yang dirancang untuk meningkatkan efisiensi operasional.
+                Sistem optimasi rute penyiraman taman kota Surabaya yang
+                dirancang untuk meningkatkan efisiensi operasional.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Produk</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">
+                Produk
+              </h4>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li>
                   <button
@@ -234,7 +248,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Bantuan</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">
+                Bantuan
+              </h4>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li>
                   <button
@@ -263,7 +279,9 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">Sosial Media</h4>
+              <h4 className="font-semibold mb-4 text-gray-900 dark:text-white">
+                Sosial Media
+              </h4>
               <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                 <li>
                   <a
@@ -298,10 +316,16 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               &copy; 2024 Watering Route Planner. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-gray-600 dark:text-gray-400">
-              <a href="#" className="hover:text-[#0F172A] dark:hover:text-white transition-colors">
+              <a
+                href="#"
+                className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
+              >
                 Privacy Policy
               </a>
-              <a href="#" className="hover:text-[#0F172A] dark:hover:text-white transition-colors">
+              <a
+                href="#"
+                className="hover:text-[#0F172A] dark:hover:text-white transition-colors"
+              >
                 Terms of Service
               </a>
             </div>

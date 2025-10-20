@@ -52,7 +52,7 @@ export default function Maps() {
   const filteredLocations = locations.filter(
     (location) =>
       location.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      location.district.toLowerCase().includes(searchQuery.toLowerCase())
+      location.district.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -102,7 +102,12 @@ export default function Maps() {
               <div className="max-h-[500px] overflow-y-auto">
                 <div className="space-y-2">
                   <h3 className="text-xs uppercase font-bold text-gray-500 px-2">
-                    Taman ({filteredLocations.filter(l => l.type === "garden").length})
+                    Taman (
+                    {
+                      filteredLocations.filter((l) => l.type === "garden")
+                        .length
+                    }
+                    )
                   </h3>
                   {filteredLocations
                     .filter((l) => l.type === "garden")
@@ -135,7 +140,12 @@ export default function Maps() {
                     ))}
 
                   <h3 className="text-xs uppercase font-bold text-gray-500 px-2 mt-4">
-                    Sumber Air ({filteredLocations.filter(l => l.type === "water_source").length})
+                    Sumber Air (
+                    {
+                      filteredLocations.filter((l) => l.type === "water_source")
+                        .length
+                    }
+                    )
                   </h3>
                   {filteredLocations
                     .filter((l) => l.type === "water_source")
@@ -174,7 +184,9 @@ export default function Maps() {
               <div className="rounded-lg border border-[#E5E7EB] bg-white p-4 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
                 <h3 className="font-bold text-gray-900 mb-3">Detail Lokasi</h3>
                 {(() => {
-                  const location = locations.find((l) => l.id === selectedLocation);
+                  const location = locations.find(
+                    (l) => l.id === selectedLocation,
+                  );
                   return location ? (
                     <div className="space-y-2 text-sm">
                       <div>

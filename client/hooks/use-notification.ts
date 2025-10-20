@@ -10,7 +10,7 @@ export const useNotification = () => {
   const notify = (
     message: string,
     type: NotificationType = "info",
-    options?: NotificationOptions
+    options?: NotificationOptions,
   ) => {
     const defaultDuration = options?.duration || 4000;
 

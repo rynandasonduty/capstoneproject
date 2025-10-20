@@ -92,8 +92,8 @@ export default function Profile() {
           </div>
 
           <div className="md:col-span-2">
-            <div className="rounded-lg border border-[#E5E7EB] bg-white p-6 xl:p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
-              <h2 className="text-2xl font-bold text-[#0F172A] mb-6">
+            <div className="rounded-lg border border-[#E5E7EB] bg-white dark:bg-white p-6 xl:p-8 shadow-[0_4px_4px_0_rgba(174,174,174,0.25)]">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Edit Profil
               </h2>
 
